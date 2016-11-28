@@ -52,6 +52,7 @@
     <Compile Include="Context\PestControlContext.cs" />
     <Compile Include="Context\PestControlDbInitializer.cs" />
     <Compile Include="DllFacade.cs" />
+    <Compile Include="Entities\AbstractEntity.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,7 +61,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
