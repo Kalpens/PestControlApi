@@ -53,6 +53,11 @@
     <Compile Include="Context\PestControlDbInitializer.cs" />
     <Compile Include="DllFacade.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />
+    <Compile Include="Entities\Destination.cs" />
+    <Compile Include="Entities\PestType.cs" />
+    <Compile Include="Entities\Route.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Worksheet.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
