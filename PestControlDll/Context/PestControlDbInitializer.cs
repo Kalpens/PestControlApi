@@ -11,7 +11,7 @@ namespace PestControlDll.Context
     {
         protected override void Seed(PestControlContext context)
         {
-            base.Seed(context)
+            base.Seed(context);
         }
     }
 }
