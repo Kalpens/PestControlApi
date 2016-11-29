@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PestControlDll.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -12,6 +13,14 @@ namespace PestControlDll.Context
         protected override void Seed(PestControlContext context)
         {
             base.Seed(context);
+            context.User.Add(new User
+            {
+                Address = "PlzGiveme12Street",
+                Email = "IWorkedHard@Seriously.plz",
+                FullName = "Mc WorksAlot",
+                LicensePlate = "PU 15 548",
+                UserType = User.UserTypeEnum.Admin
+            });
         }
     }
 }

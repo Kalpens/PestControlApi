@@ -23,6 +23,9 @@ namespace PestControlDll.Entities
 
         //Enums associated its value with ordered numbers, starting from 0.
         //TaxNoTax == 1 means that there are NoTax.
-        public enum TaxNoTax { Tax, NoTax };
+        public enum TaxNoTaxEnum { Tax, NoTax };
+        public TaxNoTaxEnum TaxNoTax { get; set; }
+
+        public Destination Destination { get; set; }
     }
 }
