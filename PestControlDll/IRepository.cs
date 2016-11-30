@@ -21,7 +21,7 @@ namespace PestControlDll
         /// <returns></returns>
         T Read(int id);
         /// <summary>
-        /// Gets the all object from the database
+        /// Gets all the objects from the database
         /// </summary>
         /// <returns></returns>
         List<T> Read();
