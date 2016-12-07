@@ -12,7 +12,6 @@ namespace PestControlDll.Context
     {
         protected override void Seed(PestControlContext context)
         {
-            base.Seed(context);
             context.User.Add(new User
             {
                 Address = "PlzGiveme12Street",
@@ -118,7 +117,7 @@ namespace PestControlDll.Context
             {
                 Name = "Andet"
             });
-
+            base.Seed(context);
         }
     }
 }
