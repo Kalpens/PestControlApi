@@ -24,7 +24,7 @@ namespace PestControlDll.Context
 
             context.Route.Add(new Route()
             {
-                Name = "Monday",
+                Name = "Just day",
                 Date = DateTime.Now
             });
 
