@@ -99,7 +99,11 @@ namespace PestControlApi.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = worksheet.Id }, worksheet);
         }
-
+        /// <summary>
+        /// Deletes specified worksheet (Requires id)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // DELETE: api/Worksheets/5
         [ResponseType(typeof(Worksheet))]
         public IHttpActionResult DeleteWorksheet(int id)
