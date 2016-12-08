@@ -18,9 +18,9 @@ namespace PestControlDll.Context
                 Email = "IWorkedHard@Seriously.plz",
                 FullName = "Mc WorksAlot",
                 LicensePlate = "PU 15 548",
-                UserType = User.UserTypeEnum.Admin
+                UserType = User.UserTypeEnum.Admin,
+                Routes = new List<Route>()
             };
-            context.User.Add(u1);
             var r1 = new Route()
             {
                 Name = "Just day",
@@ -38,6 +38,9 @@ namespace PestControlDll.Context
             };
             context.Route.Add(r1);
             context.Route.Add(r2);
+            u1.Routes.Add(r1);
+            u1.Routes.Add(r2);
+            context.User.Add(u1);
 
             context.PestType.Add(new PestType()
             {
