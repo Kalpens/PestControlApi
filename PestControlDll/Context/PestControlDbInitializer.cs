@@ -26,7 +26,8 @@ namespace PestControlDll.Context
                 Name = "Just day",
                 Date = DateTime.Now,
                 UserId = 1,
-                User = u1
+                User = u1,
+                Destinations = new List<Destination>()
             };
 
             var r2 = new Route()
@@ -34,7 +35,8 @@ namespace PestControlDll.Context
                 Name = "Tuesday",
                 Date = DateTime.Now,
                 UserId = 1,
-                User = u1
+                User = u1,
+                Destinations = new List<Destination>()
             };
             context.Route.Add(r1);
             context.Route.Add(r2);
