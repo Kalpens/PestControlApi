@@ -8,36 +8,36 @@ using System.Threading.Tasks;
 
 namespace PestControlDll.Context
 {
-    public class PestControlDbInitializer : CreateDatabaseIfNotExists<PestControlContext>
+    public class PestControlDbInitializer : DropCreateDatabaseAlways<PestControlContext>
     {
         protected override void Seed(PestControlContext context)
         {
-            base.Seed(context);
-            context.User.Add(new User
+            var u1 = new User
             {
                 Address = "PlzGiveme12Street",
                 Email = "IWorkedHard@Seriously.plz",
                 FullName = "Mc WorksAlot",
                 LicensePlate = "PU 15 548",
                 UserType = User.UserTypeEnum.Admin
-            });
-
-            context.Route.Add(new Route()
+            };
+            context.User.Add(u1);
+            var r1 = new Route()
             {
                 Name = "Just day",
-                Date = DateTime.Now
-            });
+                Date = DateTime.Now,
+                UserId = 1,
+                User = u1
+            };
 
-            context.Route.Add(new Route()
+            var r2 = new Route()
             {
                 Name = "Tuesday",
-                Date = DateTime.Now
-            });
-
-            context.Route.Add(new Route()
-            {
-                Name = "Santa's route"
-            });
+                Date = DateTime.Now,
+                UserId = 1,
+                User = u1
+            };
+            context.Route.Add(r1);
+            context.Route.Add(r2);
 
             context.PestType.Add(new PestType()
             {
@@ -118,7 +118,7 @@ namespace PestControlDll.Context
             {
                 Name = "Andet"
             });
-
+            base.Seed(context);
         }
     }
 }

@@ -8,27 +8,27 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using PestControlDll;
 using PestControlDll.Context;
 using PestControlDll.Entities;
-using PestControlDll;
 
 namespace PestControlApi.Controllers
 {
     public class RoutesController : ApiController
     {
-        private IRepository<Route> _dm = new DllFacade().GetRouteRepository();
+        private IRepository<Route> _rm = new DllFacade().GetRouteRepository();
 
         // GET: api/Routes
         public List<Route> GetRoute()
         {
-            return _dm.Read();
+            return _rm.Read();
         }
 
         // GET: api/Routes/5
         [ResponseType(typeof(Route))]
         public IHttpActionResult GetRoute(int id)
         {
-            Route route = _dm.Read(id);
+            Route route = _rm.Read(id);
             if (route == null)
             {
                 return NotFound();
@@ -53,7 +53,7 @@ namespace PestControlApi.Controllers
 
             try
             {
-                _dm.Update(route);
+                _rm.Update(route);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -79,7 +79,7 @@ namespace PestControlApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            _dm.Create(route);
+            _rm.Create(route);
 
             return CreatedAtRoute("DefaultApi", new { id = route.Id }, route);
         }
@@ -88,20 +88,20 @@ namespace PestControlApi.Controllers
         [ResponseType(typeof(Route))]
         public IHttpActionResult DeleteRoute(int id)
         {
-            Route route = _dm.Read(id);
+            Route route = _rm.Read(id);
             if (route == null)
             {
                 return NotFound();
             }
 
-            _dm.Delete(route.Id);
+            _rm.Delete(id);
 
             return Ok(route);
         }
 
         private bool RouteExists(int id)
         {
-            return _dm.Read().Count(e => e.Id == id) > 0;
+            return _rm.Read().Count(e => e.Id == id) > 0;
         }
     }
 }
