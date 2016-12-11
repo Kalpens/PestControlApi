@@ -16,6 +16,8 @@ using Microsoft.Owin.Security.OAuth;
 using PestControlApi.Models;
 using PestControlApi.Providers;
 using PestControlApi.Results;
+using PestControlDll;
+using PestControlDll.Entities;
 
 namespace PestControlApi.Controllers
 {
@@ -336,7 +338,7 @@ namespace PestControlApi.Controllers
             {
                 return GetErrorResult(result);
             }
-
+            new DllFacade().GetUserRepository().Create(new User() {Email = model.Email});
             return Ok();
         }
 
