@@ -27,5 +27,6 @@ namespace PestControlDll.Entities
         public TaxNoTaxEnum TaxNoTax { get; set; }
 
         public Destination Destination { get; set; }
+        public int DestinationId { get; set; }
     }
 }

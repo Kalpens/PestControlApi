@@ -27,7 +27,7 @@ namespace PestControlDll.Context
             modelBuilder.Entity<Route>()
                 .HasRequired<User>(u => u.User)
                 .WithMany(u => u.Routes)
-                .HasForeignKey(u => u.UserId);
+                .HasForeignKey(r => r.UserId);
 
             modelBuilder.Entity<Destination>()
                 .HasRequired<Route>(r => r.Route)
