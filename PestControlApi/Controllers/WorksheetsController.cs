@@ -46,7 +46,7 @@ namespace PestControlApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != worksheet.Id)
+            if (id != worksheet.DestinationId)
             {
                 return BadRequest();
             }
@@ -87,7 +87,7 @@ namespace PestControlApi.Controllers
             }
             catch (DbUpdateException)
             {
-                if (WorksheetExists(worksheet.Id))
+                if (WorksheetExists(worksheet.DestinationId))
                 {
                     return Conflict();
                 }
@@ -97,7 +97,7 @@ namespace PestControlApi.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = worksheet.Id }, worksheet);
+            return CreatedAtRoute("DefaultApi", new { id = worksheet.DestinationId }, worksheet);
         }
         /// <summary>
         /// Deletes specified worksheet (Requires id)
@@ -114,14 +114,14 @@ namespace PestControlApi.Controllers
                 return NotFound();
             }
 
-            _dm.Delete(worksheet.Id);
+            _dm.Delete(worksheet.DestinationId);
 
             return Ok(worksheet);
         }
 
         private bool WorksheetExists(int id)
         {
-            return _dm.Read().Count(e => e.Id == id) > 0;
+            return _dm.Read().Count(e => e.DestinationId == id) > 0;
         }
     }
 }

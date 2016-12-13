@@ -34,19 +34,6 @@ namespace PestControlDll.Context
                 .WithMany(r => r.Destinations)
                 .HasForeignKey(r => r.RouteId);
 
-            modelBuilder.Entity<Destination>()
-                .HasOptional(w => w.Worksheet)
-                .WithRequired(d => d.Destination);
-
-            modelBuilder.Entity<Worksheet>()
-                .HasMany<PestType>(w => w.PestTypes)
-                .WithMany(p => p.Worksheets)
-                .Map(pw =>
-                    {
-                        pw.MapLeftKey("WorksheetRefId");
-                        pw.MapRightKey("PestTypeRefId");
-                        pw.ToTable("WorksheetPestTypes");
-                    });
 
             base.OnModelCreating(modelBuilder);
         }

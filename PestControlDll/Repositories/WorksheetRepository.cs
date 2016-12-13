@@ -25,9 +25,9 @@ namespace PestControlDll.Repositories
         {
             using (var db = new PestControlContext())
             {
-                db.Entry(db.Worksheet.FirstOrDefault(x => x.Id == id)).State = EntityState.Deleted;
+                db.Entry(db.Worksheet.FirstOrDefault(x => x.DestinationId == id)).State = EntityState.Deleted;
                 db.SaveChanges();
-                return db.Worksheet.FirstOrDefault(x => x.Id == id) == null;
+                return db.Worksheet.FirstOrDefault(x => x.DestinationId == id) == null;
             }
         }
 
@@ -43,7 +43,7 @@ namespace PestControlDll.Repositories
         {
             using (var db = new PestControlContext())
             {
-                return db.Worksheet.FirstOrDefault(x => x.Id == id);
+                return db.Worksheet.FirstOrDefault(x => x.DestinationId == id);
             }
         }
 
