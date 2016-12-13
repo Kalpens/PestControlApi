@@ -10,7 +10,6 @@ namespace PestControlDll.Entities
     public class Destination : AbstractEntity
     {
         public Worksheet Worksheet { get; set; }
-
         //FullAddress, contains ALL info such as, street name, post code, city, country etc...
         public string FullAddress { get; set; }
         public Route Route { get; set; }

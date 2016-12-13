@@ -25,6 +25,7 @@ namespace PestControlDll.Repositories
         {
             using (var db = new PestControlContext())
             {
+                new WorksheetRepository().Delete(id);
                 db.Entry(db.Destination.FirstOrDefault(x => x.Id == id)).State = EntityState.Deleted;
                 db.SaveChanges();
                 return db.Destination.FirstOrDefault(x => x.Id == id) == null;

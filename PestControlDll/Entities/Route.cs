@@ -8,6 +8,10 @@ namespace PestControlDll.Entities
 {
     public class Route : AbstractEntity
     {
+        public Route()
+        {
+            this.Destinations = new List<Destination>();
+        }
         public List<Destination> Destinations { get; set; }
         public DateTime Date { get; set; }
         public User User { get; set; }
