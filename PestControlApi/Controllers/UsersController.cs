@@ -17,7 +17,7 @@ namespace PestControlApi.Controllers
     [Authorize]
     public class UsersController : ApiController
     {
-        private IRepository<User> _dm = new DllFacade().GetUserRepository();
+        private IRepository<User> _dm = new DALFacade().GetUserRepository();
 
         // GET: api/Users
         public List<User> GetUser()

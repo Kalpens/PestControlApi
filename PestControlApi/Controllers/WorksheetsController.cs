@@ -17,7 +17,7 @@ namespace PestControlApi.Controllers
     [Authorize]
     public class WorksheetsController : ApiController
     {
-        private IRepository<Worksheet> _dm = new DllFacade().GetWorksheetRepository();
+        private IRepository<Worksheet> _dm = new DALFacade().GetWorksheetRepository();
 
         // GET: api/Worksheets
         public List<Worksheet> GetWorksheet()

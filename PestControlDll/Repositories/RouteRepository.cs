@@ -25,7 +25,7 @@ namespace PestControlDll.Repositories
         {
             using (var db = new PestControlContext())
             {
-                List<Destination> destinations = new DllFacade().GetDestinationRepository().Read();
+                List<Destination> destinations = new DALFacade().GetDestinationRepository().Read();
                 List<Destination> toBeDeletedDestinations = destinations.Where(x => x.RouteId == id).ToList();
                 foreach (var item in toBeDeletedDestinations)
                 {

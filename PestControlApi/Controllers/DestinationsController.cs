@@ -18,7 +18,7 @@ namespace PestControlApi.Controllers
     public class DestinationsController : ApiController
     {
         
-        private IRepository<Destination> _dm = new DllFacade().GetDestinationRepository();
+        private IRepository<Destination> _dm = new DALFacade().GetDestinationRepository();
 
         // GET: api/Destinations
         public List<Destination> GetDestination()

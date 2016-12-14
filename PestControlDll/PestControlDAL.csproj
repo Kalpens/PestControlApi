@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Context\PestControlContext.cs" />
     <Compile Include="Context\PestControlDbInitializer.cs" />
-    <Compile Include="DllFacade.cs" />
+    <Compile Include="DALFacade.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />
     <Compile Include="Entities\Destination.cs" />
     <Compile Include="Entities\PestType.cs" />

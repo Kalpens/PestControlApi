@@ -338,7 +338,7 @@ namespace PestControlApi.Controllers
             {
                 return GetErrorResult(result);
             }
-            new DllFacade().GetUserRepository().Create(new User() {Email = model.Email, Routes = new List<Route>()});
+            new DALFacade().GetUserRepository().Create(new User() {Email = model.Email, Routes = new List<Route>()});
             return Ok();
         }
 

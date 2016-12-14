@@ -17,7 +17,7 @@ namespace PestControlApi.Controllers
     [Authorize]
     public class PestTypesController : ApiController
     {
-        private IRepository<PestType> _dm = new DllFacade().GetPestTypeRepository();
+        private IRepository<PestType> _dm = new DALFacade().GetPestTypeRepository();
 
         // GET: api/PestTypes
         public List<PestType> GetPestType()

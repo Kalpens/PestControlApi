@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PestControlDll
 {
-    public class DllFacade
+    public class DALFacade
     {
         public IRepository<Destination> GetDestinationRepository()
         {

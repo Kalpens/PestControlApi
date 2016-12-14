@@ -17,7 +17,7 @@ namespace PestControlApi.Controllers
     [Authorize]
     public class RoutesController : ApiController
     {
-        private IRepository<Route> _rm = new DllFacade().GetRouteRepository();
+        private IRepository<Route> _rm = new DALFacade().GetRouteRepository();
 
         // GET: api/Routes
         public List<Route> GetRoute()
