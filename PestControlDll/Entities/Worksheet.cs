@@ -25,6 +25,7 @@ namespace PestControlDll.Entities
         public string RekvNumber { get; set; }
         public int Price { get; set; }
         public string Note { get; set; }
+        public Boolean ReVisited { get; set; }
         public List<PestType> PestTypes { get; set; }
         //Enums associated its value with ordered numbers, starting from 0.
         //TaxNoTax == 1 means that there are NoTax.

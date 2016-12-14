@@ -332,9 +332,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PestControlDll\PestControlDll.csproj">
+    <ProjectReference Include="..\PestControlDll\PestControlDAL.csproj">
       <Project>{a6155e38-2839-40ef-aae6-c87ebdf17da7}</Project>
-      <Name>PestControlDll</Name>
+      <Name>PestControlDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

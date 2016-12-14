@@ -14,6 +14,7 @@ using PestControlDll;
 
 namespace PestControlApi.Controllers
 {
+    [Authorize]
     public class WorksheetsController : ApiController
     {
         private IRepository<Worksheet> _dm = new DllFacade().GetWorksheetRepository();

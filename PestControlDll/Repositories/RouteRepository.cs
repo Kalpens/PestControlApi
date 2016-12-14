@@ -25,6 +25,12 @@ namespace PestControlDll.Repositories
         {
             using (var db = new PestControlContext())
             {
+                List<Destination> destinations = new DllFacade().GetDestinationRepository().Read();
+                List<Destination> toBeDeletedDestinations = destinations.Where(x => x.RouteId == id).ToList();
+                foreach (var item in toBeDeletedDestinations)
+                {
+                    new DestinationRepository().Delete(item.Id);
+                }
                 db.Entry(db.Route.FirstOrDefault(x => x.Id == id)).State = EntityState.Deleted;
                 db.SaveChanges();
                 return db.Route.FirstOrDefault(x => x.Id == id) == null;

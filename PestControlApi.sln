@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PestControlDll", "PestControlDll\PestControlDll.csproj", "{A6155E38-2839-40EF-AAE6-C87EBDF17DA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PestControlDAL", "PestControlDll\PestControlDAL.csproj", "{A6155E38-2839-40EF-AAE6-C87EBDF17DA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PestControlDll.UnitTest", "PestControlDll.UnitTest\PestControlDll.UnitTest.csproj", "{B8E25E10-13A5-4937-A0D6-E3A14D740A53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PestControlDAL.UnitTest", "PestControlDll.UnitTest\PestControlDAL.UnitTest.csproj", "{B8E25E10-13A5-4937-A0D6-E3A14D740A53}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PestControlApi", "PestControlApi\PestControlApi.csproj", "{A2BA48F9-E8E2-40A5-96BF-C02E31753136}"
 EndProject

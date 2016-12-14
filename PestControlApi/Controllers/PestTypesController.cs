@@ -14,6 +14,7 @@ using PestControlDll;
 
 namespace PestControlApi.Controllers
 {
+    [Authorize]
     public class PestTypesController : ApiController
     {
         private IRepository<PestType> _dm = new DllFacade().GetPestTypeRepository();

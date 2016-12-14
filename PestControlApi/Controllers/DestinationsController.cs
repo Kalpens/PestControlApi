@@ -14,6 +14,7 @@ using PestControlDll;
 
 namespace PestControlApi.Controllers
 {
+    [Authorize]
     public class DestinationsController : ApiController
     {
         

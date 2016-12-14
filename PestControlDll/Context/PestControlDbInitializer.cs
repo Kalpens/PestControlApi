@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PestControlDll.Context
 {
-    public class PestControlDbInitializer : DropCreateDatabaseAlways<PestControlContext>
+    public class PestControlDbInitializer : DropCreateDatabaseIfModelChanges<PestControlContext>
     {
         protected override void Seed(PestControlContext context)
         {
